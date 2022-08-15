@@ -1,26 +1,44 @@
 /* Клиенты */
 .customers {
-  padding: 94px 0;
-  &__title {
-    margin-bottom: 50px;
+  @media screen and (max-width: 1199px) {
+    padding: 60px 0;
+    &__title {
+      margin-bottom: $margin-item;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0;
+    &__title {
+      margin-bottom: 50px;
+    }
   }
 }
 
 .customers-list {
   display: flex;
   flex-wrap: wrap;
-  margin-left: calc(-1 * 30px);
-  margin-top: calc(-1 * 30px);
+  margin: -15px;
+  // @media screen and (min-width: 480px) {
+
+  // }
+  // margin-left: calc(-1 * 30px);
+  // margin-top: calc(-1 * 30px);
 }
 
 .customers-list__item {
-  width: calc(100% / 6 - 30px);
-  margin-left: $margin-item;
-  margin-top: $margin-item;
+  margin: 15px;
+  @media screen and (max-width: 767px) {
+    flex-basis: calc((100% - 2 * 30px) / 2);
+  }
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 3 * 30px) / 3);
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 6 * 30px) / 6);
+  }
 }
 
 .customers-list__link {
-  width: 170px;
   height: 92px;
   @include flex();
   border: 1px solid $icon-color;

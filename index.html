@@ -20,40 +20,119 @@
     <!--Шапка сайта-->
     <header class="header">
       <div class="container header__container">
-        <nav class="site-nav">
-          <a class="logo header__logo" href="./index.html">
-            <span class="logo__part">Web</span>Studio</a
+        <a class="logo header__logo" href="./index.html">
+          <span class="logo__part">Web</span>Studio</a
+        >
+        <button
+          type="button"
+          class="menu-wrap__button menu-wrap__button--on js-open-menu"
+          aria-controls="menu-wrap"
+          aria-expanded="false"
+        >
+          <svg
+            class="menu-wrap__icon"
+            aria-label="Кнопка переключения мобильного меню"
+            width="40"
+            height="40"
           >
-          <ul class="nav__list list">
-            <li class="nav__item">
-              <a class="link nav__link header__link nav__link--current" href="./index.html"
-                >Студия</a
+            <use class="menu-wrap__on" href="./images/sprite.svg#menu"></use>
+          </svg>
+        </button>
+        <div class="menu-wrap js-menu-container" id="menu-wrap">
+          <button
+            type="button"
+            class="menu-wrap__button menu-wrap__button--off js-close-menu"
+            aria-controls="menu-wrap"
+            aria-expanded="false"
+          >
+            <svg
+              class="menu-wrap__icon"
+              aria-label="Кнопка переключения мобильного меню"
+              width="40"
+              height="40"
+            >
+              <use class="menu-wrap__off" href="./images/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <nav class="site-nav">
+            <ul class="nav__list list">
+              <li class="nav__item">
+                <a class="link nav__link header__link nav__link--current" href="./index.html"
+                  >Студия</a
+                >
+              </li>
+              <li class="nav__item">
+                <a class="link nav__link header__link" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="nav__item">
+                <a class="link nav__link header__link" href="">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="contacts list">
+            <li class="contacts__item">
+              <a class="link contacts__link header__link" href="mailto:info@devstudio.com">
+                <svg class="contacts__icon" width="16" height="12">
+                  <use href="./images/sprite.svg#envelope"></use>
+                </svg>
+                info@devstudio.com</a
               >
             </li>
-            <li class="nav__item">
-              <a class="link nav__link header__link" href="./portfolio.html">Портфолио</a>
+            <li class="contacts__item">
+              <a
+                class="link contacts__link header__link contacts__link--biggest"
+                href="tel:+380961111111"
+              >
+                <svg class="contacts__icon" width="10" height="16">
+                  <use href="./images/sprite.svg#smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
             </li>
-            <li class="nav__item"><a class="link nav__link header__link" href="">Контакты</a></li>
           </ul>
-        </nav>
-        <ul class="contacts list">
-          <li class="contacts__item">
-            <a class="link contacts__link header__link" href="mailto:info@devstudio.com">
-              <svg class="contacts__icon" width="16" height="12">
-                <use href="./images/sprite.svg#envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="contacts__item">
-            <a class="link contacts__link header__link" href="tel:+380961111111">
-              <svg class="contacts__icon" width="10" height="16">
-                <use href="./images/sprite.svg#smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+          <ul class="networks-list list">
+            <li class="networks-list__item">
+              <a
+                class="networks-list__link"
+                href=""
+                target="_blank"
+                rel="noopener nofollow noreferrer"
+                aria-label="Cсылка на Instagramm"
+                >Instagram</a
+              >
+            </li>
+            <li class="networks-list__item">
+              <a
+                class="networks-list__link"
+                href=""
+                target="_blank"
+                rel="noopener nofollow noreferrer"
+                aria-label="Cсылка на Twitter"
+                >Twitter</a
+              >
+            </li>
+            <li class="networks-list__item">
+              <a
+                class="networks-list__link"
+                href=""
+                target="_blank"
+                rel="noopener nofollow noreferrer"
+                aria-label="Cсылка на Facebook"
+                >Facebook</a
+              >
+            </li>
+            <li class="networks-list__item">
+              <a
+                class="networks-list__link"
+                href=""
+                target="_blank"
+                rel="noopener nofollow noreferrer"
+                aria-label="Cсылка на LinkedIn"
+                >LinkedIn</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -123,7 +202,9 @@
               <div class="work-thumb">
                 <img
                   class="work-thumb__img"
-                  src="./images/computer.jpg"
+                  srcset="./images/computer-370.jpg 370w, ./images/computer-740.jpg 740w"
+                  sizes="(min-width: 2400px) 740px, (min-width: 1200px) 370px, 100vw"
+                  src="./images/computer-370.jpg"
                   alt="работа на компьютере"
                   width="370"
                 />
@@ -134,7 +215,9 @@
               <div class="work-thumb">
                 <img
                   class="work-thumb__img"
-                  src="./images/laptop.jpg"
+                  srcset="./images/laptop-370.jpg 370w, ./images/laptop-740.jpg 740w"
+                  sizes="(min-width: 2400px) 740px, (min-width: 1200px) 370px, 100vw"
+                  src="./images/laptop-370.jpg"
                   alt="работа на ноутбуке"
                   width="370"
                 />
@@ -145,7 +228,9 @@
               <div class="work-thumb">
                 <img
                   class="work-thumb__img"
-                  src="./images/tablet.jpg"
+                  srcset="./images/tablet-370.jpg 370w, ./images/tablet-740.jpg 740w"
+                  sizes="(min-width: 2400px) 740px, (min-width: 1200px) 370px, 100vw"
+                  src="./images/tablet-370.jpg"
                   alt="работа на планшете"
                   width="370"
                 />
@@ -161,7 +246,21 @@
           <h2 class="title team__title">Наша команда</h2>
           <ul class="list team-list container__list">
             <li class="team-list__item">
-              <img class="team-list__photo" src="./images/ihor.jpg" alt="наш Игорь" width="270" />
+              <img
+                class="team-list__photo"
+                srcset="
+                  ./images/ihor-270.jpg 270w,
+                  ./images/ihor-354.jpg 354w,
+                  ./images/ihor-450.jpg 450w,
+                  ./images/ihor-540.jpg 540w,
+                  ./images/ihor-708.jpg 708w,
+                  ./images/ihor-900.jpg 900w
+                "
+                sizes="(min-width: 2400px) 540px, (min-width: 1536px) 708px, (min-width: 1200px) 270px, (min-width: 960px) 900px, (min-width: 768px) 354px, (min-width: 1200px) 270px, (min-width: 960px) 900px, (min-width: 768px) 354px, (min-width: 1200px) 270px, (min-width: 960px) 900px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                src="./images/ihor-354.jpg"
+                alt="наш Игорь"
+                width="450"
+              />
               <div class="team-container">
                 <h3 class="team-container__title">Игорь Демьяненко</h3>
                 <p class="team-container__text">Product Designer</p>
@@ -218,7 +317,21 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img class="team-list__photo" src="./images/olga.jpg" alt="наша Оля" width="270" />
+              <img
+                class="team-list__photo"
+                srcset="
+                  ./images/olga-270.jpg 270w,
+                  ./images/olga-354.jpg 354w,
+                  ./images/olga-450.jpg 450w,
+                  ./images/olga-540.jpg 540w,
+                  ./images/olga-708.jpg 708w,
+                  ./images/olga-900.jpg 900w
+                "
+                sizes="(min-width: 2400px) 540px, (min-width: 1536px) 708px, (min-width: 1200px) 270px, (min-width: 960px) 900px, (min-width: 768px) 354px, (min-width: 1200px) 270px, (min-width: 960px) 900px, (min-width: 768px) 354px, (min-width: 1200px) 270px, (min-width: 960px) 900px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                src="./images/olga-354.jpg"
+                alt="наша Оля"
+                width="450"
+              />
               <div class="team-container">
                 <h3 class="team-container__title">Ольга Репина</h3>
                 <p class="team-container__text">Frontend Developer</p>
@@ -275,7 +388,21 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img class="team-list__photo" src="./images/nikolay.jpg" alt="наш Коля" width="270" />
+              <img
+                class="team-list__photo"
+                srcset="
+                  ./images/nikolay-270.jpg 270w,
+                  ./images/nikolay-354.jpg 354w,
+                  ./images/nikolay-450.jpg 450w,
+                  ./images/nikolay-540.jpg 540w,
+                  ./images/nikolay-708.jpg 708w,
+                  ./images/nikolay-900.jpg 900w
+                "
+                sizes="(min-width: 2400px) 540px, (min-width: 1536px) 708px, (min-width: 1200px) 270px, (min-width: 960px) 900px, (min-width: 768px) 354px, (min-width: 1200px) 270px, (min-width: 960px) 900px, (min-width: 768px) 354px, (min-width: 1200px) 270px, (min-width: 960px) 900px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                src="./images/nikolay-354.jpg"
+                alt="наш Коля"
+                width="450"
+              />
               <div class="team-container">
                 <h3 class="team-container__title">Николай Тарасов</h3>
                 <p class="team-container__text">Marketing</p>
@@ -332,7 +459,21 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img class="team-list__photo" src="./images/mihail.jpg" alt="наш Миша" width="270" />
+              <img
+                class="team-list__photo"
+                srcset="
+                  ./images/mihail-270.jpg 270w,
+                  ./images/mihail-354.jpg 354w,
+                  ./images/mihail-450.jpg 450w,
+                  ./images/mihail-540.jpg 540w,
+                  ./images/mihail-708.jpg 708w,
+                  ./images/mihail-900.jpg 900w
+                "
+                sizes="(min-width: 2400px) 540px, (min-width: 1536px) 708px, (min-width: 1200px) 270px, (min-width: 960px) 900px, (min-width: 768px) 354px, (min-width: 1200px) 270px, (min-width: 960px) 900px, (min-width: 768px) 354px, (min-width: 1200px) 270px, (min-width: 960px) 900px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                src="./images/mihail-354.jpg"
+                alt="наш Миша"
+                width="450"
+              />
               <div class="team-container">
                 <h3 class="team-container__title">Михаил Ермаков</h3>
                 <p class="team-container__text">UI Designer</p>
@@ -462,7 +603,6 @@
             <li class="customers-list__item">
               <a
                 class="customers-list__link"
-                class="customers-list__link"
                 href=""
                 target="_blank"
                 rel="noopener nofollow noreferrer"
@@ -484,7 +624,7 @@
           <a href="./index.html" class="logo footer__logo"
             ><span class="logo__label">Web</span>Studio
           </a>
-          <address>
+          <address class="adress-wrap">
             <ul class="adress-list list">
               <li><p class="adress-list__text">г. Киев, пр-т Леси Украинки, 26</p></li>
               <li>
@@ -551,9 +691,9 @@
             </li>
           </ul>
         </div>
-        <form class="subscribe-form" autocomplete="off">
+        <div class="subscribe-container">
           <p class="container__text">Подпишитесь на рассылку</p>
-          <div class="subscribe-container">
+          <form class="subscribe-form" autocomplete="off">
             <label class="subscribe-form__label">
               <input class="subscribe-form__input" type="email" name="mail" placeholder="E-mail" />
             </label>
@@ -563,8 +703,8 @@
                 <use href="./images/sprite.svg#icon-send"></use>
               </svg>
             </button>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </footer>
     <!-- Модальное окно -->
@@ -627,6 +767,13 @@
         </form>
       </div>
     </div>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
